@@ -5,10 +5,10 @@ build/
 dist/
 wheels/
 *.egg-info
-uv.lock
+
 
 # Virtual environments
 .venv
-
+uv.lock
 #Logs
 game_sate.jsonl
