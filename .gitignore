@@ -11,4 +11,4 @@ wheels/
 .venv
 uv.lock
 #Logs
-game_sate.jsonl
+*.jsonl
