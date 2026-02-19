@@ -43,17 +43,17 @@ def main():
             
         updatable.update(dt)
 
-        for rock in asteroids:
-            if rock.collides_with(PLAYER):
+        for asteroid in asteroids:
+            if asteroid.collides_with(PLAYER):
                 log_event("player_hit")
                 print("Game over!")
                 sys.exit()
 
-        for rock in asteroids:
+        for asteroid in asteroids:
             for shot in shots:
-                if shot.collides_with(rock):
+                if shot.collides_with(asteroid):
                     log_event("asteroid_shot")
-                    rock.kill()
+                    asteroid.split()
                     shot.kill()
 
         screen.fill("black")
