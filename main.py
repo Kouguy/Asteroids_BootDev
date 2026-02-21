@@ -1,5 +1,5 @@
 import sys
-import pygame # type: ignore
+import pygame  # type: ignore
 
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from logger import log_state, log_event
@@ -16,19 +16,19 @@ def main():
 
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    Clock=pygame.time.Clock()
-   
-    updatable = pygame.sprite.Group()# Group object
-    drawable = pygame.sprite.Group()# Group object
+    Clock = pygame.time.Clock()
+
+    updatable = pygame.sprite.Group()  # Group object
+    drawable = pygame.sprite.Group()  # Group object
     asteroids = pygame.sprite.Group()
     shots = pygame.sprite.Group()
 
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = (updatable,)
-    Player.containers = (updatable, drawable) # Containers for Player
-    Shot.containers = (shots,updatable, drawable)
+    Player.containers = (updatable, drawable)  # Containers for Player
+    Shot.containers = (shots, updatable, drawable)
 
-    PLAYER = Player(SCREEN_WIDTH / 2,SCREEN_HEIGHT / 2)
+    PLAYER = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
     ASTEROIDFIELD = AsteroidField()
 
@@ -39,8 +39,8 @@ def main():
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                return 
-            
+                return
+
         updatable.update(dt)
 
         for asteroid in asteroids:
@@ -66,7 +66,8 @@ def main():
         Clock.tick(60)
         dt = Clock.get_time() / 1000
         # print(dt)
-        
+
+
 if __name__ == "__main__":
-    
     main()
+
