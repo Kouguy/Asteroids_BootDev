@@ -10,5 +10,6 @@ wheels/
 # Virtual environments
 .venv
 uv.lock
+.ropeproject
 #Logs
 *.jsonl
