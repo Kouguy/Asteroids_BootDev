@@ -1,11 +1,12 @@
 import sys
+
 import pygame  # type: ignore
 
-from constants import SCREEN_WIDTH, SCREEN_HEIGHT
-from logger import log_state, log_event
-from player import Player
 from asteroid import Asteroid
 from AsteroidField import AsteroidField
+from constants import SCREEN_HEIGHT, SCREEN_WIDTH
+from logger import log_event, log_state
+from player import Player
 from shot import Shot
 
 
@@ -70,4 +71,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
